@@ -209,7 +209,8 @@ input[type=submit]:active{
 
 
 header{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/hero-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero-min.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -230,15 +231,25 @@ header{
     margin-top: 20px;
 }
 
+.logo-black {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+
+/* Main-nav */
 .main-nav{
     float: right;
     list-style: none;
+    margin-top: 55px;
 }
 
 .main-nav li{
     display: inline-block;
     margin-left: 40px;
-    margin-top: 55px;
+    
 }
 
 .main-nav li a:link,
@@ -257,6 +268,45 @@ header{
     border-bottom: 2px solid #e67e22;
 }
 
+/* Mobile-nav */
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+/* Sticky-nav */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 16px 0;
+    color: #555;
+}
+
+.sticky .logo {display: none;}
+.sticky .logo-black {display: block;}
+
+.sticky .main-nav{
+    margin-top: 18px;
+}
+
+
 /* -------------------------------------------------------- */
 /* FEATURES */
 /* -------------------------------------------------------- */
@@ -264,6 +314,9 @@ header{
 .section-features .long-copy {
     margin-bottom: 30px;
 }
+
+.sticky main-nav li a:link,
+
 
 
 /* -------------------------------------------------------- */
@@ -380,7 +433,8 @@ header{
 /* -------------------------------------------------------- */
 
 .section-testimonials {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(img/back-customers-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg);
     background-size: cover;
     color: #fff;
     background-attachment: fixed;
@@ -581,5 +635,30 @@ footer p{
     color: #888;
     text-align: center;
 }
+
+/* -------------------------------------------------------- */
+/* ANIMATIONS */
+/* -------------------------------------------------------- */
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3{
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-4{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated{
+    opacity: 1;
+}
+
+ html { scroll-behavior: smooth; }
 
 
