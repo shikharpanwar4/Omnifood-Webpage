@@ -224,14 +224,14 @@ header{
     transform: translate(-50%, -50%);
 }
 
-.raju_food{
-    height: 300px;
+.logo{
+    height: 110px;
     width: auto;
     float: left;
     margin-top: 20px;
 }
 
-.raju_food-black {
+.logo-black {
     display: none;
     height: 50px;
     width: auto;
@@ -299,8 +299,8 @@ header{
     color: #555;
 }
 
-.sticky .raju_food {display: none;}
-.sticky .raju_food-black {display: block;}
+.sticky .logo {display: none;}
+.sticky .logo-black {display: block;}
 
 .sticky .main-nav{
     margin-top: 18px;
@@ -505,8 +505,8 @@ cite img {
 .plan-price {
     font-size: 300%;
     margin-bottom: 10px;
-    font-weight: 300;
     color: #e67e22;
+    font-weight: 300;
 }
 
 .plan-price-meal {
@@ -515,7 +515,6 @@ cite img {
 
 .plan-price span {
     font-size: 30%;
-    font-weight: 300;
 }
 
 .plan-box ul {
